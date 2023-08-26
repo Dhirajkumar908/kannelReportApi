@@ -5,8 +5,6 @@ import json
 # Create your views here.
 
 def home(request):
-    que=request.POST.get('que')
-    print(que)
     url = "http://182.18.144.140:14000/status?password=foonimbus"
     response = requests.get(url)
     if response.status_code == 200:
@@ -21,8 +19,6 @@ def home(request):
 
 
 def kannel(request):
-    que=request.POST.get('que')
-    print(que)
     url = "http://103.119.220.71:1503/status?password=4fg4wsdf"
     response = requests.get(url)
     if response.status_code == 200:
