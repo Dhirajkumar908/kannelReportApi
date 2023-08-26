@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="shadow-sm bg-body p-3">
+        {% for repo in select_line|slice:"8" %}
+          {{repo}} 
+        {% endfor %}
+        {% for repo in select_line|slice:"8:25" %}
+        <p class="text-secondary">{{repo}} </p>
+       {% endfor %}
+      
+        
+      
+        
+       <table class="table">
+        {% for repo in select_line|slice:"25:" %}
+       <tr>
+        <td>
+            <p class="text-danger">{{repo}} </p>
+        </td>
+       </tr>
+       {% endfor %}
+      </table>
+    
+    </div>
+{% endblock %}
