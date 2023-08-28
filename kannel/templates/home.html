@@ -1,5 +1,9 @@
 
 {% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "css/home.css" %}" type="text/css" />
+{% endblock %}
 
 
 {% block content %}
@@ -14,15 +18,19 @@
         
       
         
-       <table class="table">
+       <table class="table table-hover">
         {% for repo in select_line|slice:"25:" %}
        <tr>
-        <td>
-            <p class="text-danger">{{repo}} </p>
+        <td class="">
+            <p class="text-danger qued">{{repo}} </p>
         </td>
        </tr>
        {% endfor %}
       </table>
     
     </div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static "js/home.js" %}"></script>
 {% endblock %}

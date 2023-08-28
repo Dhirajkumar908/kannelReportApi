@@ -1,0 +1,5 @@
+.nav-item :hover{
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    }

@@ -27,6 +27,7 @@ def kannel(request):
         status_lines = status_data.split('\n')
         conditions="queued 0 msgs"
         select_line=[line for line in status_lines if conditions not in line]
+        
     else:
         status_lines = ["Error: Unable to fetch data from the server."]
     return render(request, 'home.html', {'select_line':select_line})
