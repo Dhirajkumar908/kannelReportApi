@@ -5,7 +5,7 @@ import json
 # Create your views here.
 
 def home(request):
-    url = "http://182.18.144.140:14000/status?password=foonimbus"
+    url = "http://182.18.144.140:14000/status?password="
     response = requests.get(url)
     if response.status_code == 200:
         status_data =response.text
