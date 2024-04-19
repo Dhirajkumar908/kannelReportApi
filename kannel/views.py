@@ -19,7 +19,7 @@ def home(request):
 
 
 def kannel(request):
-    url = "http://103.119.220.71:1503/status?password=4fg4wsdf"
+    url = "http://103.119.220.71:1503/status?password="
     response = requests.get(url)
     if response.status_code == 200:
         status_data =response.text
